@@ -47,7 +47,7 @@ fun Login(modifier: Modifier, navController: NavController) {
         Spacer(modifier = Modifier.padding(12.dp))
         ForgotPassword(Modifier.align(Alignment.CenterHorizontally))
         Spacer(modifier = Modifier.padding(12.dp))
-        LoginButton(Modifier.align(Alignment.CenterHorizontally))
+        LoginButton(Modifier.align(Alignment.CenterHorizontally), navController)
         Spacer(modifier = Modifier.padding(12.dp))
         HaveDontAcccount(Modifier.align(Alignment.CenterHorizontally), "No tienes una cuenta?")
         Spacer(modifier = Modifier.padding(12.dp))
@@ -70,9 +70,9 @@ fun CreateAccountButton(modifier: Modifier, navController: NavController) {
 }
 
 @Composable
-fun LoginButton(modifier: Modifier) {
+fun LoginButton(modifier: Modifier, navController: NavController) {
     Button(
-        onClick = {},
+        onClick = {navController.navigate("ProfileScreen")},
         modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 30.dp, vertical = 12.dp)

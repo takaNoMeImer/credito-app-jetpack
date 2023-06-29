@@ -12,6 +12,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.credito_app.ui.screens.LoginScreen
 import com.example.credito_app.ui.screens.ProductsScreen
+import com.example.credito_app.ui.screens.ProfileScreen
 import com.example.credito_app.ui.screens.RegisterScreen
 import com.example.credito_app.ui.screens.StartedScreen
 import com.example.credito_app.ui.theme.CREDITO_APPTheme
@@ -40,6 +41,9 @@ class MainActivity : ComponentActivity() {
                         }
                         composable("ProductsScreen") {
                             ProductsScreen()
+                        }
+                        composable("ProfileScreen") {
+                            ProfileScreen(navController)
                         }
                     }
                 }
